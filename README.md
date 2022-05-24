@@ -1,15 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
+* Ruby version 3.0.3 & Rails version 6.1.5
 
 * System dependencies
+    Nodejs
+    Mysql
+    Git
+
 
 * Configuration
+    bundle i
+    yarn install
+    install tailwind
+    ./bin/bundle add tailwindcss-rails
+    ./bin/rails tailwindcss:install
 
 * Database creation
 
