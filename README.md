@@ -7,7 +7,6 @@
     Mysql
     Git
 
-
 * Configuration
     bundle i
     yarn install
@@ -16,8 +15,7 @@
     ./bin/rails tailwindcss:install
 
 * Database creation
-
-* Database initialization
+    rails db:create db:migrate  
 
 * How to run the test suite
 

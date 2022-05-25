@@ -1,4 +1,31 @@
-<div>
-  <h1 class="font-bold text-4xl">Locations#new</h1>
-  <p>Find me in app/views/locations/new.html.erb</p>
-</div>
+<%= form_for(@location) do |f| %>
+
+  <div class="row">
+      <%= f.hidden_field :role, value: "Location" %>
+  
+      <div class="input-field col s6">
+          Name
+          <%= f.text_field :name %>
+      </div>
+      
+      <div class="input-field col s6">
+          Country
+          <%= f.select(:country, options_for_select([["Kenya", "Kenya"]]), { :include_blank=>false }) %>
+      </div>
+
+      <div class="input-field col s6">
+          County
+          <%= f.select(:county, options_for_select([["Nairobi", "Nairobi"]]), { :include_blank=>false }) %>
+      </div>
+
+      <div class="input-field col s6">
+          Sub County
+          <%= f.select(:subcounty, options_for_select([["Kajiado East", "Kajiado East"]]), { :include_blank=>false }) %>
+      </div>
+  
+      <div class="input-field col s12">
+          <%= f.submit "Add", :class => "waves-effect waves-light green lighten-green btn-small btn-flat" %>
+      </div>
+  </div>
+  <% end %>
+  

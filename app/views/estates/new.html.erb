@@ -1,0 +1,46 @@
+<%= form_for(@estate) do |f| %>
+
+  <div class="row">
+      <%= f.hidden_field :role, value: "Location" %>
+  
+      <div class="input-field col s6">
+          Name
+          <%= f.text_field :name %>
+      </div>
+      
+      <div class="input-field col s6">
+          Location
+          <%= f.collection_select :location, Location.order(:name),:id,:name, include_blank: true %>
+      </div>
+
+      <div class="input-field col s6">
+          Coordinates
+          <%= f.text_field :coordinates %>
+      </div>
+
+      <div class="input-field col s6">
+          neigbourhood
+          <%= f.text_field :neighourhood %>
+      </div>
+
+      <div class="input-field col s6">
+          Schools
+          <%= f.text_field :schools %>
+      </div>
+
+      <div class="input-field col s6">
+          Crime
+          <%= f.text_field :crime %>
+      </div>
+
+      <div class="input-field col s6">
+          Nearby
+          <%= f.text_field :nearby %>
+      </div>
+  
+      <div class="input-field col s12">
+          <%= f.submit "Add", :class => "waves-effect waves-light green lighten-green btn-small btn-flat" %>
+      </div>
+  </div>
+  <% end %>
+  

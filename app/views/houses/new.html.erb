@@ -1,0 +1,44 @@
+<%= form_for(@house) do |f| %>
+
+  <div class="row">  
+      <div class="input-field col s6">
+          House Number
+          <%= f.text_field :house_number %>
+      </div>
+
+      <div class="input-field col s6">
+          Rent
+          <%= f.text_field :rent %>
+      </div>
+      
+      <div class="input-field col s6">
+          Nature
+          <%= f.select(:nature, options_for_select([["Commercial", "Commercial"],["Residential", "Residential"]]), { :include_blank=>false }) %>
+      </div>
+
+      <div class="input-field col s6">
+          Bathrooms
+          <%= f.text_field :bathrooms %>
+      </div>
+
+      <div class="input-field col s6">
+          Bedrooms
+          <%= f.text_field :bedrooms %>
+      </div>
+
+      <div class="input-field col s6">
+          Pets Allowed
+          <%= f.select(:pets, options_for_select([["Yes", 0],["No", 1]]), { :include_blank=>false }) %>
+      </div>
+
+      <div class="input-field col s6">
+          Additional information
+          <%= f.text_field :description %>
+      </div>
+  
+      <div class="input-field col s12">
+          <%= f.submit "Add", :class => "waves-effect waves-light green lighten-green btn-small btn-flat" %>
+      </div>
+  </div>
+  <% end %>
+  

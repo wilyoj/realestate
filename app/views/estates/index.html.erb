@@ -1,0 +1,23 @@
+<div class="right ">
+    <%= link_to "Add", new_estate_path,  :class => "waves-effect waves-light green lighten-green white-text btn-small btn-flat" %>
+   
+</div>
+<p>
+<table class="table table-striped table-hover table-responsive-sm table-bordered ">
+    <thead class="thead-dark">
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Coordinates</th>
+            <th>Neigbourhood</th>
+            <th>Schools</th>
+            <th>Crime</th>
+            <th>Nearby</th>
+            <th>Date added</th>
+        </tr>
+    </thead>
+    <tbody class="black-text">
+        <%= render @estates %>
+    </tbody>
+</table>
+</p>
